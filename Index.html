@@ -37,7 +37,7 @@
                 </div>                
             </div>             
         <br/>
-        <h1>Current city</h1>
+        <div id="city"><h1>Current city</h1></div>
         <ul class="list-group list-group-horizontal" id="weather data">
             <li class="list-group-item" id="last update time">Last updated</li>
             <li class="list-group-item" id="weather description">Description</li>
@@ -46,10 +46,12 @@
         </ul>
         <div class="row">
             <div class="col-xs center-col">
-                <div class="card" style="width: 18rem;"><i class="wi wi-day-sunny weather-image"></i></div>
+                <div class="card" style="width: 18rem;">
+                  <i class="wi wi-day-sunny weather-image" 
+                    id="currentIcon"></i></div>
             </div>
             <div class="col-xs center-col">
-                <div class="card"><h1>22</h1></div>
+                <div class="card" id="temperature"><h1>22</h1></div>
             </div>
         </div>
         <div class="row justify-content-around">
