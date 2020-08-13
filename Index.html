@@ -1,102 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SheCodes Final Project Weather App</title>
-    <link rel="stylesheet" href="src/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/CSS/weather-icons.min.css"/>
-</head>
-<body>
+    <link rel="stylesheet" href="src/CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/CSS/weather-icons.min.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="weather-app-wrapper">
-            <div class="row">
-                <div class="col-6">
-                    <input 
-                        type="search" 
-                        id="cityInput" 
-                        placeholder="Enter a city.."
-                        name="q" 
-                        autocomplete="off"
-                        />
-                </div>
-                <div class="col">      
-                    <input 
-                            type="submit" 
-                            value="Search" 
-                            class="btn btn-primary btn-block"/>
-                </div>
-                <div class="col"> 
-                        <input 
-                        id="currentLocation" 
-                        type="submit" 
-                        class="btn btn-info btn-block" 
-                        value="Current Location"/>   
-                </div>                
-            </div>             
-        <br/>
-        <div id="city"><h1>Current city</h1></div>
-        <ul class="list-group list-group-horizontal" id="weather data">
-            <li class="list-group-item" id="last update time">Last updated</li>
-            <li class="list-group-item" id="weather description">Description</li>
-            <li class="list-group-item" id="humidity">Humidity</li>
-            <li class="list-group-item" id="wind">Wind</li>
-        </ul>
-        <div class="row">
-            <div class="col-xs center-col">
-                <div class="card" style="width: 18rem;">
-                  <i class="wi wi-day-sunny weather-image" 
-                    id="currentIcon"></i></div>
-            </div>
-            <div class="col-xs center-col">
-                <div class="card" id="temperature"><h1>22</h1></div>
-            </div>
+      <div class="weather-app-wrapper">
+        <div class="row search-row">
+          <div class="city-search">
+            <input
+              type="search"
+              id="cityInput"
+              placeholder="Enter a city.."
+              name="q"
+              autocomplete="off"
+              
+            />
+          </div>
+          <div class="search-button">
+            <input
+              id="searchButton"
+              type="submit"
+              value="🔎"
+              class="btn btn-primary btn-block"
+            />
+          </div>
+          <div>
+            <input
+              id="currentLocation"
+              type="submit"
+              class="btn btn-info btn-block"
+              value="📌🌍"
+            />
+          </div>
         </div>
-        <div class="row justify-content-around">
-            <div class="col-sm center-col flex-grow-1">
-              <div class="card">
-                <i class="card-img-top wi wi-day-sunny weather-image"></i>
-                <div class="card-body">
-                  Mon
-                </div>
-              </div>
-            </div>
-            <div class="col-sm center-col flex-grow-1">
-              <div class="card">
-                <i class="card-img-top wi wi-day-sunny weather-image"></i>
-                <div class="card-body">
-                  Tue
-                </div>
-              </div>
-            </div>
-            <div class="col-sm center-col flex-grow-1">
-              <div class="card" >
-                <i class="card-img-top wi wi-day-sunny weather-image"></i>
-                <div class="card-body">
-                  Wen
-                </div>
-              </div>
-            </div>
-            <div class="col-sm center-col flex-grow-1">
-              <div class="card">
-                <i class="card-img-top wi wi-day-sunny weather-image"></i>
-                <div class="card-body">
-                  Thu
-                </div>
-              </div>
-            </div>
-            <div class="col-sm center-col flex-grow-1">
-              <div class="card">
-                <i class="card-img-top wi wi-day-sunny weather-image"></i>
-                <div class="card-body">
-                  Fri
-                </div>
-              </div>
-            </div>
+        <div class="row" id="city"><h1>Current city</h1></div>
+        <div class="row weather-info-container">
+          <i class="wi wi-day-sunny weather-image" id="currentIcon"></i>
+
+          <div class="temperature" id="currentTemperature">
+            <div class="main">22</div>
+            <div class="temp-unit">ºC | ºF</div>
+          </div> 
+          
+          <div class="weather-details">
+            <div id="last update time">Last updated</div>
+            <div id="weather description">Description</div>
+            <div id="humidity">Humidity</div>
+            <div id="wind">Wind</div>
+          </div>
+
+          
         </div>
+        
+        <div class="row weather-forcast-wrapper">
+          <div class="weather-forcast-container">
+            <div class="card">
+              <i class="card-img-top wi wi-day-sunny weather-image"></i>
+              <div class="card-body">
+                Mon
+              </div>
+            </div>
+          </div>
+          <div class="weather-forcast-container">
+            <div class="card">
+              <i class="card-img-top wi wi-day-sunny weather-image"></i>
+              <div class="card-body">
+                Tue
+              </div>
+            </div>
+          </div>
+          <div class="weather-forcast-container">
+            <div class="card">
+              <i class="card-img-top wi wi-day-sunny weather-image"></i>
+              <div class="card-body">
+                Wen
+              </div>
+            </div>
+          </div>
+          <div class="weather-forcast-container">
+            <div class="card">
+              <i class="card-img-top wi wi-day-sunny weather-image"></i>
+              <div class="card-body">
+                Thu
+              </div>
+            </div>
+          </div>
+          <div class="weather-forcast-container">
+            <div class="card">
+              <i class="card-img-top wi wi-day-sunny weather-image"></i>
+              <div class="card-body">
+                Fri
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-<script src="src/app.js"></script>
-</body>
+    <script src="src/app.js"></script>
+  </body>
 </html>
