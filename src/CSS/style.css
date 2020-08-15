@@ -46,7 +46,7 @@ body {
     border-color: #56ccac !important;
 }
 h1 {
-    color:#009a7c;
+    color:#56ccac;
     font-size: 24px;
     font-weight: 100;
     line-height: 28px;
@@ -66,10 +66,11 @@ h1 {
 #currentIcon {
     padding: 6px 20px 6px 20px;
     font-size: 70px;
+    color: #7025A3;
 }
 .temperature{
     display: flex;
-    color: #67768a;
+    color: #7025A3;
     padding: 6px 24px 6px 4px;
 
 }
@@ -87,6 +88,9 @@ h1 {
 .weather-details > div {
     line-height: 17px;
 }
+#weather-description:first-letter {
+    text-transform: capitalize;
+  }
 .weather-app-wrapper .weather-forcast-wrapper{
       flex-wrap: nowrap;
 }
@@ -95,7 +99,8 @@ h1 {
     margin: 0 3px;
 }  
 .card {
-    background-color: transparent !important;
+    background-color: #B9EAD8 !important;
+    border: none !important;
 }    
 
  
