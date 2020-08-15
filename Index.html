@@ -20,7 +20,7 @@
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
-        <div class="row search-row">
+          <form id="search-form" class="row search-row">
           <div class="city-search">
             <input
               type="search"
@@ -47,7 +47,7 @@
               value="📌🌍"
             />
           </div>
-        </div>
+         </form>
         <div class="row" id="city"><h1>Current city</h1></div>
         <div class="row weather-info-container">
           <i class="wi wi-day-sunny weather-image" id="currentIcon"></i>
@@ -60,8 +60,8 @@
           <div class="weather-details">
             <div>Last updated: <span id="last-update-time">00:00</span></div>
             <div id="weather-description">Description</div>
-            <div id="humidity">Humidity</div>
-            <div id="wind">Wind</div>
+            <div>Humidity: <span id="humidity">Humidity</span>%</div>
+            <div>Wind: <span id="wind">Wind</span> km/h</div>
           </div>
 
           
