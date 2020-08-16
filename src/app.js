@@ -55,15 +55,14 @@ async function showCity(submitEvent) {
   submitEvent.preventDefault();
   const input = document.querySelector("#cityInput");
   const inputCity = input.value;
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=${apiKey}&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=${apiKey}&units=metric`;
   await getWeather(url);
 }
+
 
 async function getWeather(url) {
   const result = await fetch(url);
   const data = await result.json();
-
-  console.log(data);
 
   let mainTemperatureElement = document.querySelector("#currentTemperature");
   let cityElement = document.querySelector("#city");
@@ -86,6 +85,31 @@ async function getWeather(url) {
 
   return data;
 }
+
+function displayFahrenheit(event) {
+  event.preventDefault();
+  alert("Fairy units not supported. Use real units 😃😅")
+ }
+
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheit);
+
+async function showPosition(geolocationPosition) {
+  const lat = geolocationPosition.coords.latitude;
+  const lon = geolocationPosition.coords.longitude;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  await getWeather(url);
+}
+
+function getCurrentPosition() {
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+let button = document.querySelector("#currentLocation");
+button.addEventListener("click", getCurrentPosition);
+
+
 
 displayDate();
 let citySubmit = document.querySelector("#search-form");
