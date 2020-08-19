@@ -42,71 +42,31 @@
           <div>
             <input
               id="currentLocation"
-              type="submit"
+              type="button"
               class="btn btn-info btn-block"
               value="📌🌍"
             />
           </div>
          </form>
-        <div class="row" id="city"><h1>Current city</h1></div>
-        <div class="row weather-info-container">
-          <i class="wi wi-day-sunny weather-image" id="currentIcon"></i>
-
-          <div class="temperature">
-            <div class="main" id="currentTemperature">22</div>
-            <div class="temp-unit">°C | <a href="#" id="fahrenheit-link">°F</a></div>
-          </div> 
-          
-          <div class="weather-details">
-            <div>Last updated: <span id="last-update-time"></span></div>
-            <div id="weather-description"></div>
-            <div>Humidity: <span id="humidity"></span>%</div>
-            <div>Wind: <span id="wind"></span> km/h </div>
-          </div>
-
-        </div>
+          <div class="row" id="city"><h1></h1></div>
+         <div class="row weather-info-container">
+           <i class="wi wi-day-sunny weather-image" id="currentIcon"></i>
+ 
+           <div class="temperature">
+             <div class="main" id="currentTemperature">22</div>
+             <div class="temp-unit">°C | <a href="#" id="fahrenheit-link">°F</a></div>
+           </div> 
+           
+           <div class="weather-details">
+             <div>Last updated: <span id="last-update-time"></span></div>
+             <div id="weather-description"></div>
+             <div>Humidity: <span id="humidity"></span>%</div>
+             <div>Wind: <span id="wind"></span> km/h </div>
+           </div>
+ 
+         </div>
         
-        <div class="row weather-forcast-wrapper">
-          <div class="weather-forcast-container">
-            <div class="card">
-              <i class="card-img-top wi wi-day-sunny weather-image"></i>
-              <div class="card-body">
-                Mon
-              </div>
-            </div>
-          </div>
-          <div class="weather-forcast-container">
-            <div class="card">
-              <i class="card-img-top wi wi-day-sunny weather-image"></i>
-              <div class="card-body">
-                Tue
-              </div>
-            </div>
-          </div>
-          <div class="weather-forcast-container">
-            <div class="card">
-              <i class="card-img-top wi wi-day-sunny weather-image"></i>
-              <div class="card-body">
-                Wen
-              </div>
-            </div>
-          </div>
-          <div class="weather-forcast-container">
-            <div class="card">
-              <i class="card-img-top wi wi-day-sunny weather-image"></i>
-              <div class="card-body">
-                Thu
-              </div>
-            </div>
-          </div>
-          <div class="weather-forcast-container">
-            <div class="card">
-              <i class="card-img-top wi wi-day-sunny weather-image"></i>
-              <div class="card-body">
-                Fri
-              </div>
-            </div>
-          </div>
+        <div id="weather-forcast-wrapper" class="row weather-forcast-wrapper">
         </div>
       </div>
     </div>

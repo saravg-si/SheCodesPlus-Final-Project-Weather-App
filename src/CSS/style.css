@@ -54,7 +54,15 @@ h1 {
     margin-bottom: 0;
     margin-left: 20px;
 }
-.weather-info-container{
+#city {
+    opacity: 0;
+    height: 0px;
+    transition: opacity ease-in 0.5s;
+}
+.row.weather-info-container{
+    opacity: 0;
+    height: 0px;
+    transition: opacity ease-in 0.5s;
     align-items: center;
     justify-content: space-between;
     
